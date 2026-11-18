@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- telefon uyumu için gerekli -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Türk Masalları</title>
+
+    <!-- CSS: sayfanın görünüşü ayrı dosyada -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ÜST ALAN -->
+    <header>
+
+        <img class="ust-bordur" src="gorseller/ust-bordur.png" alt="">
+        <h1>Türk Masalları</h1>
+        <p class="tekerleme">Bir varmış, bir yokmuş…</p>
+    </header>
+
+    <main>
+
+        <!-- TANITIM YAZISI -->
+        <section id="masal-bilgisi">
+            <p>
+                Masallar; hayal gücüne dayanan, çoğunlukla olağanüstü
+                olayları ve karakterleri konu alan, sözlü gelenek
+                aracılığıyla kuşaktan kuşağa aktarılan anlatılardır.
+                Belirsiz zamanlarda ve hayalî mekânlarda geçen bu
+                hikâyelerde insanlar, hayvanlar ve olağanüstü varlıklar
+                bir araya gelir. Masallar, yalnızca dinleyeni farklı
+                dünyalara götüren anlatılar değil; aynı zamanda
+                insanların duygu, düşünce ve deneyimlerini paylaşma
+                yollarından biridir.
+            </p>
+            <p>
+                Türk kültüründe masallar, geçmişle bugün arasında
+                bağ kuran önemli bir sözlü kültür mirasıdır. Aile
+                içinde ve topluluklarda anlatılarak yaşatılan bu
+                hikâyeler; dönemin yaşam biçiminden, değerlerinden,
+                inanışlarından ve hayal dünyasından izler taşır.
+                İyilik, cesaret, adalet, dayanışma ve akıl gibi
+                temalar, farklı masallarda çeşitli biçimlerde
+                karşımıza çıkar. Masalların derlenmesi ve gelecek
+                kuşaklara aktarılması, bu kültürel birikimin
+                korunmasına katkı sağlar.
+            </p>
+        </section>
+
+        <!-- MASAL LİSTESİ -->
+        <section id="masallar">
+
+            <div class="arama-alani">
+                <label for="arama-kutusu">Masal ara</label>
+                <input type="search" id="arama-kutusu" placeholder="Örneğin: peri" autocomplete="off">
+            </div>
+
+            <p id="sonuc-yok">Bu adla bir masal bulunamadı. Başka bir kelime deneyin.</p>
+            <!-- masal listesindeki butonları gösterir.Orada bir buton vardır ama çalışma işlemi buradan yapılmaz -->
+            <div class="masal-listesi">
+
+                <button class="masal-butonu" data-masal="0">
+                    <span class="masal-numarasi">01</span>
+                    <span class="masal-basligi">Peri Kızı</span>
+                    <span class="masal-ok" aria-hidden="true">↗</span>
+                </button>
+
+                <button class="masal-butonu" data-masal="1">
+                    <span class="masal-numarasi">02</span>
+                    <span class="masal-basligi">Çobanla Köpeği</span>
+                    <span class="masal-ok" aria-hidden="true">↗</span>
+                </button>
+
+                <button class="masal-butonu" data-masal="2">
+                    <span class="masal-numarasi">03</span>
+                    <span class="masal-basligi">İnatçı Horoz</span>
+                    <span class="masal-ok" aria-hidden="true">↗</span>
+                </button>
+
+                <button class="masal-butonu" data-masal="3">
+                    <span class="masal-numarasi">04</span>
+                    <span class="masal-basligi">Keloğlan ve Altın Bülbül</span>
+                    <span class="masal-ok" aria-hidden="true">↗</span>
+                </button>
+
+                <button class="masal-butonu" data-masal="4">
+                    <span class="masal-numarasi">05</span>
+                    <span class="masal-basligi">Kurnaz Kurt</span>
+                    <span class="masal-ok" aria-hidden="true">↗</span>
+                </button>
+
+                <button class="masal-butonu" data-masal="5">
+                    <span class="masal-numarasi">06</span>
+                    <span class="masal-basligi">Reyhan Güzeli ile Padişah Oğlu</span>
+                    <span class="masal-ok" aria-hidden="true">↗</span>
+                </button>
+
+                <button class="masal-butonu" data-masal="6">
+                    <span class="masal-numarasi">07</span>
+                    <span class="masal-basligi">Tuz Kadar Sevgi</span>
+                    <span class="masal-ok" aria-hidden="true">↗</span>
+                </button>
+
+                <button class="masal-butonu" data-masal="7">
+                    <span class="masal-numarasi">08</span>
+                    <span class="masal-basligi">Üç Turunçlar</span>
+                    <span class="masal-ok" aria-hidden="true">↗</span>
+                </button>
+
+                <button class="masal-butonu" data-masal="8">
+                    <span class="masal-numarasi">09</span>
+                    <span class="masal-basligi">Kırk Dost</span>
+                    <span class="masal-ok" aria-hidden="true">↗</span>
+                </button>
+
+                <button class="masal-butonu" data-masal="9">
+                    <span class="masal-numarasi">10</span>
+                    <span class="masal-basligi">İncili Çadır</span>
+                    <span class="masal-ok" aria-hidden="true">↗</span>
+                </button>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ALT ALAN -->
+    <footer>
+        <p class="hazirlayan">Hazırlayan: Zeynep Sıla Kuştu</p>
+        <p>Medipol Üniversitesi, Görsel İletişim Tasarımı · Programlamaya Giriş · 2026-2027 Güz</p>
+        <p>Türk Masalları, Dijital Masal Arşivi</p>
+
+        <button type="button" id="kaynakca-butonu">Kaynakça</button>
+    </footer>
+
+    <!-- KAYNAKÇA PENCERESİ -->
+    <dialog id="kaynakca-penceresi" aria-labelledby="kaynakca-basligi">
+        <div class="pencere-baslik">
+            <h2 id="kaynakca-basligi">Kaynakça</h2>
+            <button type="button" id="kaynakca-kapat" aria-label="Pencereyi kapat">×</button>
+        </div>
+        <div class="kaynakca-ici">
+            <p class="kaynakca-giris">
+                Masal metinleri T.C. Kültür ve Turizm Bakanlığının Kültür Portalı’ndan
+                (www.kulturportali.gov.tr) alınmıştır. Parantez içinde masalın ilk yayımlandığı yer verilmiştir.
+            </p>
+            <ul>
+                <li>Arseven, V. (Derleyen). İnatçı Horuz (Ocakbaşı Masalı). T.C. Kültür ve Turizm Bakanlığı, <em>Kültür Portalı</em>. (İlk yayım: Türk Folklor Araştırmaları Dergisi, 1955, sayı 72.)</li>
+                <li>Arseven, V. (Derleyen). İncili Çadır. T.C. Kültür ve Turizm Bakanlığı, <em>Kültür Portalı</em>. (İlk yayım: Türk Folklor Araştırmaları Dergisi, 1967, sayı 221.)</li>
+                <li>Çetin, N. (Derleyen). Reyhan Güzeli ile Padişah Oğlu. T.C. Kültür ve Turizm Bakanlığı, <em>Kültür Portalı</em>. (İlk yayım: Türk Folklor Araştırmaları Dergisi, 1968, sayı 225.)</li>
+                <li>Çetin, N. (Derleyen). Üç Turunçlar. T.C. Kültür ve Turizm Bakanlığı, <em>Kültür Portalı</em>. (İlk yayım: Türk Folklor Araştırmaları Dergisi, 1968, sayı 227.)</li>
+                <li>Kartal, N. (Derleyen). Çobanla Köpeği. T.C. Kültür ve Turizm Bakanlığı, <em>Kültür Portalı</em>. (İlk yayım: Türk Folklor Araştırmaları Dergisi, sayı 205.)</li>
+                <li>Kartal, N. (Derleyen). Kurnaz Kurt Masalı. T.C. Kültür ve Turizm Bakanlığı, <em>Kültür Portalı</em>. (İlk yayım: Türk Folklor Araştırmaları Dergisi, 1969, sayı 234.)</li>
+                <li>Peri Kızı. T.C. Kültür ve Turizm Bakanlığı, <em>Kültür Portalı</em>. (İlk yayım: Naki Tezel, <em>Türk Masalları I</em>, Kültür Bakanlığı Yayınları, 1990.)</li>
+                <li>Sakaoğlu, S. (Derleyen). Tuz Kadar Sevgi. T.C. Kültür ve Turizm Bakanlığı, <em>Kültür Portalı</em>. (İlk yayım: <em>Gümüşhane-Bayburt Masalları</em>, Ankara: Akçağ Yayınevi, 2002.)</li>
+                <li>San, S. (Derleyen). Kırk Dost Masalı. T.C. Kültür ve Turizm Bakanlığı, <em>Kültür Portalı</em>. (İlk yayım: Türk Folklor Araştırmaları Dergisi, 1954, sayı 56.)</li>
+                <li>Saygı, O. (Derleyen). Keloğlan ve Altın Bülbül Masalı. T.C. Kültür ve Turizm Bakanlığı, <em>Kültür Portalı</em>. (İlk yayım: Türk Folklor Araştırmaları Dergisi, 1969, sayı 240.)</li>
+            </ul>
+            <p class="kaynakca-notu">
+                Masallar, olay örgüleri ve sonları korunarak günümüz Türkçesiyle yeniden anlatılmıştır.
+                Sayfadaki görseller yapay zekâ ile üretilmiştir.
+            </p>
+        </div>
+    </dialog>
+
+    <!-- MASAL PENCERESİ -->
+    <dialog id="masal-penceresi" aria-labelledby="pencere-masal-basligi">
+        <div class="pencere-baslik">
+            <h2 id="pencere-masal-basligi">Masalın adı</h2>
+            <div class="pencere-araclari">
+                <button type="button" class="boyut-butonu" id="yazi-kucult" aria-label="Yazıyı küçült">A−</button>
+                <button type="button" class="boyut-butonu" id="yazi-buyut" aria-label="Yazıyı büyüt">A+</button>
+                <button type="button" id="pencere-kapat" aria-label="Pencereyi kapat">×</button>
+            </div>
+        </div>
+
+        <div class="pencere-ici">
+
+            <div class="kose-sirasi" aria-hidden="true">
+                <img class="kose" src="gorseller/kose-motifi.png" alt="">
+                <img class="kose sag-ust" src="gorseller/kose-motifi.png" alt="">
+            </div>
+
+            <img id="gorsel-bas" class="masal-gorseli" src="" alt="">
+
+            <div id="pencere-masal-metni"></div>
+
+            <img id="gorsel-son" class="masal-gorseli" src="" alt="">
+
+            <div class="kose-sirasi alt" aria-hidden="true">
+                <img class="kose sol-alt" src="gorseller/kose-motifi.png" alt="">
+                <img class="kose sag-alt" src="gorseller/kose-motifi.png" alt="">
+            </div>
+        </div>
+    </dialog>
+
+<!-- JavaScript: sayfanın davranışı ayrı dosyada -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,433 @@
+/* Türk Masalları – stil dosyası (index.html içindeki <link> ile bağlanır) */
+
+/* RENK PALETİ: renkler buradan değişir */
+:root {
+    --kagit:   #F6F0E4;
+    --murekkep:#2B2622;
+    --kok-boya:#8E2B23;
+    --cini:    #1D4E6B;
+    --altin:   #C49A3A;
+    --cizgi:   #D9CDB8;
+    --kart:    #FBF7EF;
+}
+
+/* GENEL AYARLAR */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--kagit);
+    color: var(--murekkep);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+/* ANA BAŞLIK */
+header {
+    text-align: center;
+    padding: 40px 20px 40px;
+}
+
+/* ÜST KENARLIK */
+.ust-bordur {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 24px;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--kok-boya);
+
+    font-size: clamp(40px, 9vw, 84px);
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+.tekerleme {
+    margin: 14px 0 0;
+    font-style: italic;
+    font-size: clamp(17px, 2.5vw, 21px);
+    color: var(--cini);
+}
+
+/* TANITIM YAZISI */
+#masal-bilgisi {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px 40px;
+}
+
+#masal-bilgisi p {
+    font-size: 18px;
+    margin: 0 0 18px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* ARAMA KUTUSU */
+#masallar {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 40px 80px;
+}
+
+.arama-alani {
+    margin-bottom: 28px;
+}
+
+.arama-alani label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: var(--cini);
+}
+
+#arama-kutusu {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--cizgi);
+    border-radius: 6px;
+    background-color: var(--kart);
+    color: var(--murekkep);
+    font-family: inherit;
+    font-size: 18px;
+}
+
+#arama-kutusu:focus {
+    outline: none;
+    border-color: var(--cini);
+}
+
+#sonuc-yok {
+    display: none;
+    padding: 20px 0;
+    font-style: italic;
+}
+
+/* MASAL BUTONLARI */
+.masal-listesi {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.masal-butonu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 22px 28px;
+
+    border: 1px solid var(--cizgi);
+    border-left: 6px solid var(--cini);
+    border-radius: 4px;
+    background-color: var(--kart);
+    color: var(--murekkep);
+
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.masal-numarasi {
+    font-size: 15px;
+    color: var(--kok-boya);
+    min-width: 24px;
+}
+
+.masal-basligi {
+    flex: 1;
+    font-size: clamp(22px, 3.6vw, 36px);
+    line-height: 1.2;
+}
+
+.masal-ok {
+    font-size: 26px;
+    transition: transform 0.25s ease;
+}
+
+.masal-butonu:hover {
+    background-color: var(--kok-boya);
+    border-left-color: var(--altin);
+    color: #FFFFFF;
+}
+
+.masal-butonu:hover .masal-numarasi {
+    color: #FFFFFF;
+}
+
+.masal-butonu:hover .masal-ok {
+    transform: translate(4px, -4px);
+}
+
+.masal-butonu:focus-visible {
+    outline: 3px solid var(--altin);
+    outline-offset: 3px;
+}
+
+/* ALT ALAN: HAZIRLAYAN VE KAYNAKÇA BUTONU */
+footer {
+    border-top: 1px solid var(--cizgi);
+    padding: 40px 24px 32px;
+    text-align: center;
+}
+
+footer > p {
+    margin: 0 0 6px;
+    text-align: center;
+    font-size: 15px;
+    color: var(--cini);
+}
+
+.hazirlayan {
+    font-size: 17px;
+}
+
+#kaynakca-butonu {
+    margin-top: 18px;
+    padding: 8px 18px;
+    border: 1px solid var(--cini);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--cini);
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#kaynakca-butonu:hover {
+    background-color: var(--cini);
+    color: #FFFFFF;
+}
+
+/* KAYNAKÇA PENCERESİ */
+#kaynakca-penceresi {
+    width: min(680px, calc(100% - 32px));
+    max-height: 85vh;
+    padding: 0;
+    border: none;
+    border-top: 8px solid var(--kok-boya);
+    border-radius: 8px;
+    background-color: var(--kart);
+    color: var(--murekkep);
+}
+
+#kaynakca-penceresi::backdrop {
+    background: rgba(29, 30, 40, 0.7);
+}
+
+#kaynakca-basligi {
+    margin: 0;
+    color: var(--kok-boya);
+    font-size: 26px;
+    font-weight: normal;
+}
+
+#kaynakca-kapat {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color: var(--kok-boya);
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.kaynakca-ici {
+    max-height: calc(85vh - 80px);
+    overflow-y: auto;
+    padding: 20px 28px 28px;
+}
+
+.kaynakca-ici ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.kaynakca-ici li {
+    margin-bottom: 12px;
+    padding-left: 28px;
+    text-indent: -28px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.kaynakca-giris {
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+.kaynakca-notu {
+    margin: 20px 0 0;
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* MASAL PENCERESİ */
+#masal-penceresi {
+    width: min(720px, calc(100% - 32px));
+    max-height: 88vh;
+    padding: 0;
+    border: none;
+    border-top: 8px solid var(--kok-boya);
+    border-radius: 8px;
+    background-color: var(--kart);
+    color: var(--murekkep);
+}
+
+#masal-penceresi::backdrop {
+    background: rgba(29, 30, 40, 0.7);
+}
+
+.pencere-baslik {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--cizgi);
+}
+
+#pencere-masal-basligi {
+    margin: 0;
+    color: var(--kok-boya);
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: normal;
+}
+
+.pencere-araclari {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+/* YAZI BOYUTU DÜĞMELERİ (A− / A+) */
+.boyut-butonu {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--cizgi);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--cini);
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boyut-butonu:hover {
+    background-color: var(--cini);
+    color: #FFFFFF;
+}
+
+#pencere-kapat {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color: var(--kok-boya);
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* KÖŞE MOTİFLERİ */
+.kose-sirasi {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px 0;
+}
+
+.kose-sirasi.alt {
+    padding: 0 16px 16px;
+    clear: both;
+}
+
+.kose {
+    width: 100px;
+}
+
+.kose.sag-ust { transform: scaleX(-1); }
+.kose.sol-alt { transform: scaleY(-1); }
+.kose.sag-alt { transform: scale(-1, -1); }
+
+/* MASAL GÖRSELLERİ */
+.masal-gorseli {
+    display: block;
+    width: calc(100% - 56px);
+    max-width: 620px;
+    margin: 24px auto;
+    border: 6px double var(--altin);
+    border-radius: 4px;
+}
+
+/* MASAL METNİ */
+#pencere-masal-metni {
+    max-width: 64ch;
+    margin: 0 auto;
+    padding: 8px 28px 16px;
+    font-size: 18px;
+    line-height: 1.9;
+    white-space: pre-line;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* BÜYÜK İLK HARF */
+#pencere-masal-metni::first-letter {
+    float: left;
+    font-size: 3.4em;
+    line-height: 0.9;
+    padding: 6px 10px 0 0;
+    color: var(--kok-boya);
+}
+
+.pencere-ici {
+    max-height: calc(88vh - 80px);
+    overflow-y: auto;
+}
+
+/* TELEFON EKRANLARI */
+@media (max-width: 600px) {
+    header {
+        padding: 40px 16px 28px;
+    }
+
+    #masallar {
+        padding: 16px 16px 60px;
+    }
+
+    .masal-butonu {
+        padding: 18px 16px;
+        gap: 12px;
+    }
+
+    .masal-ok {
+        font-size: 20px;
+    }
+
+    .pencere-baslik {
+        padding: 14px 16px;
+        flex-wrap: wrap;
+    }
+
+    #pencere-masal-metni {
+        padding: 8px 18px 12px;
+    }
+
+    .kose {
+        width: 64px;
+    }
+
+    .masal-gorseli {
+        width: calc(100% - 36px);
+        margin: 18px auto;
+    }
+}
